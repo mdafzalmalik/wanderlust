@@ -12,7 +12,7 @@ body {
 
 /* nav-bar */
 .navbar {
-  height: 6rem;
+  height: 5rem;
   background-color: #ffffff;
 }
 
@@ -52,7 +52,7 @@ body {
 
 .f-info {
   text-align: center;
-  height: 8rem;
+  height: 6rem;
   background-color: #ebebeb;
   display: flex;
   flex-wrap: wrap;
