@@ -23,10 +23,6 @@ const listingRouter = require("./routes/listings.js");
 const reviewRouter = require("./routes/reviews.js");
 const userRouter = require("./routes/users.js");
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a9957ba2aef462c6ed430caf212a1461af533189
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
@@ -37,23 +33,14 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 const dbUrl = process.env.ATLASDB_URL;
-<<<<<<< HEAD
-=======
-// console.log("Connecting to:", dbUrl);
->>>>>>> a9957ba2aef462c6ed430caf212a1461af533189
 
 main()
   .then(() => {
     console.log("DB connected");
   })
   .catch((err) => {
-<<<<<<< HEAD
-  console.log(err);
-});
-=======
     console.log(err);
   });
->>>>>>> a9957ba2aef462c6ed430caf212a1461af533189
 
 async function main() {
   await mongoose.connect(dbUrl);
@@ -69,7 +56,7 @@ const store = MongoStore.create({
 
 store.on("error", (err) => {
   console.log("Error in Mongo Session Store", err);
-})
+});
 
 const sessionOptions = {
   store: store,
@@ -84,7 +71,7 @@ const sessionOptions = {
 };
 
 app.get("/", (req, res) => {
-    res.redirect("/listings");
+  res.redirect("/listings");
 });
 
 app.use(session(sessionOptions));
